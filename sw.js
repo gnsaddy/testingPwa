@@ -1,9 +1,6 @@
-// methods for offline caching
-// caches.open
-// cache.all and cache.add('./index.html')
-
 const staticCacheName = 'site-static';
 const assets = [
+	'/',
 	'/index.html',
 	'/js/app.js',
 	'/css/bootstrap.css',
@@ -12,13 +9,14 @@ const assets = [
 	'/css/popper.min.js',
 	'/css/tooltip.min.js',
 	'/css/jquery-3.4.0.slim.min.js',
-	'/icon-384x384.png'
+	'/icon-384x384.png',
+	'/manifest.json'
 ];
 
 // install event
-self.addEventListener('install', event => {
+self.addEventListener('install', evt => {
 	console.log('service worker installed');
-	event.waitUntil(
+	evt.waitUntil(
 		caches.open(staticCacheName).then(cache => {
 			console.log('caching shell assets');
 			cache.addAll(assets);
@@ -26,18 +24,17 @@ self.addEventListener('install', event => {
 	);
 });
 
-// activate service worker
-self.addEventListener('activate', event => {
-	console.log('service worker has been activated');
+// activate event
+self.addEventListener('activate', evt => {
+	console.log('service worker activated');
 });
 
 // fetch event
-// when we want to use button to add on home screen
-self.addEventListener('fetch', event => {
-	console.log('fetch event fired', event);
-	event.respondWith(
-		caches.match(event.request).then(cacheRes => {
-			return cacheRes || fetch(event.request);
+self.addEventListener('fetch', evt => {
+	console.log('fetch event', evt);
+	evt.respondWith(
+		caches.match(evt.request).then(cacheRes => {
+			return cacheRes || fetch(evt.request);
 		})
 	);
 });
