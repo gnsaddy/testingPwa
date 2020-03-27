@@ -4,7 +4,6 @@
 
 const staticCacheName = 'site-static';
 const assets = [
-	'/',
 	'/index.html',
 	'/js/app.js',
 	'/css/bootstrap.css',
