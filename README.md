@@ -49,6 +49,7 @@ $ npm install express --save
 
 for running server:-
 $ node server.js
+
 ---------------------------------------------------------------------------------------------------------------
 For running using VScode, download live server and then run that server.
 live server basically runs over localhost(127.0.0.1:port) server.
