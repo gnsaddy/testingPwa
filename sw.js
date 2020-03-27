@@ -10,7 +10,8 @@ const assets = [
 	'/css/tooltip.min.js',
 	'/css/jquery-3.4.0.slim.min.js',
 	'/icon-384x384.png',
-	'/manifest.json'
+	'/manifest.json',
+	'/img/icons'
 ];
 
 // install event
