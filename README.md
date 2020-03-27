@@ -41,10 +41,15 @@ Tools and technology used:
     8. Express server
     9. Nodejs and npm
 --------------------------------------------------------------------------------------------------------------
+Note:- In chrome open inspect elements and then open application tab then go to service worker and 
+CHECK on Update on Reload
 
 $ sudo apt-get install nodejs
 $ npm install express --save
 
 for running server:-
 $ node server.js
+---------------------------------------------------------------------------------------------------------------
+For running using VScode, download live server and then run that server.
+live server basically runs over localhost(127.0.0.1:port) server.
     
