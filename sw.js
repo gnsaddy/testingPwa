@@ -4,15 +4,15 @@
 
 const staticCacheName = 'site-static';
 const assets = [
-	'/index.html',
-	'/js/app.js',
-	'/css/bootstrap.css',
-	'/css/style.css',
-	'/css/bootstrap.js',
-	'/css/popper.min.js',
-	'/css/tooltip.min.js',
-	'/css/jquery-3.4.0.slim.min.js',
-	'/icon-384x384.png'
+	'index.html',
+	'js/app.js',
+	'css/bootstrap.css',
+	'css/style.css',
+	'css/bootstrap.js',
+	'css/popper.min.js',
+	'css/tooltip.min.js',
+	'css/jquery-3.4.0.slim.min.js',
+	'icon-384x384.png'
 ];
 
 // install event
